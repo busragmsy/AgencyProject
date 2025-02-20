@@ -9,7 +9,7 @@ namespace AcunMedyaAkademiAgency.Entities
 	{
 		public int TeamId { get; set; }
 		public string NameSurname { get; set; }
-		public string Work { get; set; }
+
 		public string ImageUrl { get; set; }
 
     }

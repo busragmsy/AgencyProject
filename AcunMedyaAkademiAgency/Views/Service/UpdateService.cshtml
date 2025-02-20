@@ -1,0 +1,37 @@
+﻿﻿@model AcunMedyaAkademiAgency.Entities.Service
+@{
+    ViewBag.Title = "UpdateService";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<div class="col-12 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Hizmet Güncelleme Sayfası</h4>
+            <p class="card-description">Hizmet ile güncelleme işlemlerini buradan yapabilirsiniz.</p>
+            <form class="forms-sample" method="post">
+                <div class="form-group">
+                    <label for="exampleInputName1">Id</label>
+                    @Html.TextBoxFor(x => x.ServiceId, new { @class = "form-control" })
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputName1">Hizmet Adı</label>
+                    @Html.TextBoxFor(x => x.Title, new { @class = "form-control" })
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleInputCity1">Hizmet Resim Yolu</label>
+                    @Html.TextBoxFor(x => x.ImageUrl, new { @class = "form-control" })
+                </div>
+                <div class="form-group">
+                    <label for="exampleTextarea1">Açıklaması</label>
+                    <textarea class="form-control"
+                              id="exampleTextarea1"
+                              rows="4" name="Description">@Model.Description</textarea>
+                </div>
+                <button type="submit" class="btn btn-primary mr-2"> Güncelle </button>
+                <button class="btn btn-light">Vazgeç</button>
+            </form>
+        </div>
+    </div>
+</div>
