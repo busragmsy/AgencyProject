@@ -32,7 +32,16 @@ Bu projede kullanılan temel teknolojiler ve araçlar:
 ---
 
 ## 🔐 Admin Panelim
-
+![Image](https://github.com/user-attachments/assets/d87a2219-6ed5-4fc9-9b3f-312bf911c234)
+![Image](https://github.com/user-attachments/assets/e5ece23a-a748-4012-a474-ffeb802420ca)
+![Image](https://github.com/user-attachments/assets/decbfc44-22dd-4694-a800-5bada2ab2b67)
+![Image](https://github.com/user-attachments/assets/6a36f13a-bda2-48ce-8e49-824f160951a9)
+![Image](https://github.com/user-attachments/assets/1eb295b1-1a0f-45df-9089-a2014e617d73)
+![Image](https://github.com/user-attachments/assets/2b5870cb-de15-458a-a9c5-5889afa4972c)
+![Image](https://github.com/user-attachments/assets/db72eb72-9b2a-4836-a835-f0ac158bfb94)
+![Image](https://github.com/user-attachments/assets/b8097157-db5b-4b1f-b23f-a8a55bb7f7f8)
+![Image](https://github.com/user-attachments/assets/7e8d25bb-ce79-4119-96f3-082bf3150223)
+![Image](https://github.com/user-attachments/assets/146ac5c7-3b18-4475-91e7-5b43dab69d45)
 
 ---
 
