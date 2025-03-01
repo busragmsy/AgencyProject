@@ -1,0 +1,66 @@
+﻿﻿<section class="page-section" id="contact">
+    <div class="container">
+        <div class="text-center">
+            <h2 class="section-heading text-uppercase">Bizimle Paylaş</h2>
+            <h3 class="section-subheading text-muted">Görüşlerin ve Önerilerin Bizim İçin Çok Önemli</h3>
+        </div>
+        <!-- * * * * * * * * * * * * * * *-->
+        <!-- * * SB Forms Contact Form * *-->
+        <!-- * * * * * * * * * * * * * * *-->
+        <!-- This form is pre-integrated with SB Forms.-->
+        <!-- To make this form functional, sign up at-->
+        <!-- https://startbootstrap.com/solution/contact-forms-->
+        <!-- to get an API token!-->
+        <form method="post" action="@Url.Action("SendMessage", "Default")" id="contactForm" data-sb-form-api-token="API_TOKEN">
+            <div class="row align-items-stretch mb-5">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <!-- Name input-->
+                        <input class="form-control" id="name" name="NameSurname" type="text" placeholder="İsim Soyisim *" data-sb-validations="required" />
+                        <div class="invalid-feedback" data-sb-feedback="name:required">İsim Boş Bırakılamaz</div>
+
+                    </div>
+                    <div class="form-group">
+                        <!-- Email address input-->
+
+                        <input class="form-control" id="email" name="Email" type="email" placeholder="Mailiniz *" data-sb-validations="required,email" />
+                        <div class="invalid-feedback" data-sb-feedback="email:required">Mail Adresi Zorunludur</div>
+                        <div class="invalid-feedback" data-sb-feedback="email:email">Mail Mevcut Değil</div>
+
+                    </div>
+                    <div class="form-group mb-md-0">
+                        <!-- Title input-->
+                        <input class="form-control" id="message" name="Title" type="text" placeholder="Mesaj Başlığı *" data-sb-validations="required" />
+                        <div class="invalid-feedback" data-sb-feedback="message:required">Başlık Boş Bırakılamaz</div>
+
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group form-group-textarea mb-md-0">
+                        <!-- Message input-->
+                        <textarea class="form-control" id="message" name="Description" placeholder="Mesajınız *" data-sb-validations="required"></textarea>
+                        <div class="invalid-feedback" data-sb-feedback="message:required">Mesaj Boş Bırakılamaz</div>
+                    </div>
+                </div>
+            </div>
+            <!-- Submit success message-->
+            @if (TempData["successMessage"] != null)
+            {
+                <div class="text-center text-white mb-3">
+                    <div class="fw-bolder">@TempData["successMessage"]</div>
+                    <br />
+                </div>
+            }
+            <!-- Submit error message-->
+            @if (TempData["errorMessage"] != null)
+            {
+                <div class="text-center text-danger mb-3">
+                    <div class="fw-bolder">@TempData["errorMessage"]</div>
+                    <br />
+                </div>
+            }
+            <!-- Submit Button-->
+            <div class="text-center"><button class="btn btn-primary btn-xl text-uppercase" id="submitButton" type="submit">GÖNDER</button></div>
+        </form>
+    </div>
+</section>

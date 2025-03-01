@@ -1,0 +1,53 @@
+﻿@model AcunMedyaAkademiAgency.Entities.Team
+@{
+    ViewBag.Title = "UpdateTeam";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<div class="col-12 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Personel Güncelleme Sayfası</h4>
+            <p class="card-description">Personel güncelleme işlemlerini buradan yapabilirsiniz.</p>
+
+            <form class="forms-sample" method="post">
+                <div class="form-group">
+                    <label>Personel Id</label>
+                    @Html.TextBoxFor(x => x.TeamId, new { @class = "form-control", @readonly = "readonly" })
+                </div>
+
+                <div class="form-group">
+                    <label>Ad Soyad</label>
+                    @Html.TextBoxFor(x => x.NameSurname, new { @class = "form-control" })
+                </div>
+
+                <div class="form-group">
+                    <label>Resim Yolu</label>
+                    @Html.TextBoxFor(x => x.ImageUrl, new { @class = "form-control" })
+                </div>
+
+                <div class="form-group">
+                    <label>Cinsiyet</label>
+                    @Html.DropDownListFor(x => x.Gender, new List<SelectListItem>
+                    {
+                        new SelectListItem { Text = "Kadın", Value = "Kadın" },
+                        new SelectListItem { Text = "Erkek", Value = "Erkek" }
+                    }, new { @class = "table table-bordered" })
+                </div>
+
+                <div class="form-group">
+                    <label>Şehir</label>
+                    @Html.TextBoxFor(x => x.City, new { @class = "form-control" })
+                </div>
+
+                <div class="form-group">
+                    <label>Branş</label>
+                    @Html.DropDownListFor(x => x.BranchId, (List<SelectListItem>)ViewBag.cat, new { @class = "table table-bordered" })
+                </div>
+
+                <button type="submit" class="btn btn-primary mr-2">Güncelle</button>
+                <a href="/Team/TeamList" class="btn btn-light">Vazgeç</a>
+            </form>
+        </div>
+    </div>
+</div>

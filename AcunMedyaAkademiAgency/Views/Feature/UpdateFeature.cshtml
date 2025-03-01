@@ -1,0 +1,35 @@
+﻿@model AcunMedyaAkademiAgency.Entities.Feature
+@{
+    ViewBag.Title = "UpdateFeature";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<div class="col-12 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Feature Güncelleme Sayfası</h4>
+            <p class="card-description">Feature güncelleme işlemlerini buradan yapabilirsiniz.</p>
+
+            <form class="forms-sample" method="post">
+                <div class="form-group">
+                    <label>Feature Id</label>
+                    @Html.TextBoxFor(x => x.FeatureId, new { @class = "form-control", @readonly = "readonly" })
+                </div>
+                <div class="form-group">
+                    <label>Öne Çıkanlar Başlığı</label>
+                    @Html.TextBoxFor(x => x.Title, new { @class = "form-control" })
+                </div>
+                <div class="form-group">
+                    <label>Öne Çıkanlar Açıklaması</label>
+                    @Html.TextAreaFor(x => x.Description, new { @class = "form-control", rows = 4 })
+                </div>
+                <div class="form-group">
+                    <label>Resim Yolu</label>
+                    @Html.TextBoxFor(x => x.ImageUrl, new { @class = "form-control" })
+                </div>
+                <button type="submit" class="btn btn-primary mr-2">Güncelle</button>
+                <a href="/Feature/FeatureList" class="btn btn-light">Vazgeç</a>
+            </form>
+        </div>
+    </div>
+</div>

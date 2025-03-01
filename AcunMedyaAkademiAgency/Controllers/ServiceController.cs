@@ -11,14 +11,21 @@ namespace AcunMedyaAkademiAgency.Controllers
     public class ServiceController : Controller
     {
         AgencyContext context = new AgencyContext();
-        public ActionResult ServiceList()
+        public ActionResult ServiceList(string searchText)
         {
-            var values = context.Services.ToList();
+            List<Service> values;
+            if (searchText != null)
+            {
+                values = context.Services.Where(x => x.Title.Contains(searchText)).ToList();
+                return View(values);
+            }
+            values = context.Services.ToList();
             return View(values);
         }
         [HttpGet]
         public ActionResult CreateService()
         {
+            
             return View();
         }
         [HttpPost]

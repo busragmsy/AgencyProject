@@ -1,0 +1,64 @@
+﻿
+@{
+    ViewBag.Title = "CategoryList";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+    int count = 0;
+}
+
+<div class="col-lg-12 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Kategori Sayfası</h4>
+            <p class="card-description">Kategori işlemlerini buradan yönetebilirsiniz.</p>
+
+            <!-- Arama Formu -->
+            <form method="get">
+                <div class="form-group">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Aranacak Kategori" name="searchText" value="@ViewBag.SearchText" />
+                        <div class="input-group-append">
+                            <button class="btn btn-sm btn-primary"> Ara </button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+
+            <div class="table-responsive">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Kategori Adı</th>
+                            <th>Sil</th>
+                            <th>Güncelle</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            count++;
+                            <tr>
+                                <td>@count</td>
+                                <td>@item.CategoryName</td>
+                                <td>
+                                    <a class="btn btn-danger btn-sm" href="/Category/DeleteCategory/@item.CategoryId">
+                                        <i class="fa fa-trash"></i> Sil
+                                    </a>
+                                </td>
+                                <td>
+                                    <a class="btn btn-success btn-sm" href="/Category/UpdateCategory/@item.CategoryId">
+                                        <i class="fa fa-pencil"></i> Güncelle
+                                    </a>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+                <br />
+                <a href="/Category/CreateCategory" class="btn btn-info">
+                    <i class="mdi mdi-file-check btn-icon-append"></i> Yeni Kategori Ekle
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

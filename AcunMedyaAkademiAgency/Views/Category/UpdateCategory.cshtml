@@ -1,0 +1,27 @@
+﻿@model AcunMedyaAkademiAgency.Entities.Category
+@{
+    ViewBag.Title = "UpdateCategory";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<div class="col-12 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Kategori Güncelleme Sayfası</h4>
+            <p class="card-description">Kategori güncelleme işlemlerini buradan yapabilirsiniz.</p>
+
+            <form class="forms-sample" method="post">
+                <div class="form-group">
+                    <label>Kategori Id</label>
+                    @Html.TextBoxFor(x => x.CategoryId, new { @class = "form-control", @readonly = "readonly" })
+                </div>
+                <div class="form-group">
+                    <label>Kategori Adı</label>
+                    @Html.TextBoxFor(x => x.CategoryName, new { @class = "form-control" })
+                </div>
+                <button type="submit" class="btn btn-primary mr-2">Güncelle</button>
+                <a href="/Category/Index" class="btn btn-light">Vazgeç</a>
+            </form>
+        </div>
+    </div>
+</div>

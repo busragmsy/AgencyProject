@@ -1,0 +1,62 @@
+﻿@model List<AcunMedyaAkademiAgency.Entities.Team>
+@{
+    ViewBag.Title = "TeamList";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+    var count = 0;
+}
+
+<div class="col-lg-12 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Personel Sayfası</h4>
+
+            <p class="card-description">
+                Personeller ile ilgili işlemleri buradan yapabilirsiniz
+            </p>
+            <form method="get">
+                <div class="form-group">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Aranacak Kelime" aria-label="Aranacak Kelime" aria-describedby="basic-addon2" name="searchText" />
+                        <div class="input-group-append">
+                            <button class="btn btn-sm btn-primary"> Ara </button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            <div class="table-responsive">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>No</th>
+                            <th>Personel Adı Soyadı</th>
+                            <th>Personel Resmi</th>
+                            <th>Cinsiyet</th>
+                            <th>Şehir</th>
+                            <th>Sil</th>
+                            <th>Güncelle</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>@count</td>
+                                <td>@item.NameSurname</td>
+                                <td><img src="@item.ImageUrl" style="width:75px; height:75px" alt="Personel Görseli" /></td>
+                                <td>@item.Gender</td>
+                                <td>@item.City</td>
+                                <td><a class="btn btn-danger" href="/Team/DeleteTeam/@item.TeamId"><i class="fa fa-trash"></i>Sil</a></td>
+                                <td><a class="btn btn-success" href="/Team/UpdateTeam/@item.TeamId"><i class="fa fa-pencil">Güncelle</i></a></td>
+                            </tr>
+                            count++;
+                        }
+                    </tbody>
+                </table>
+                <br />
+                <a href="/Team/CreateTeam" class="btn btn-info"><i class="mdi mdi-file-check btn-icon-append">Personel Ekle</i></a>
+
+            </div>
+        </div>
+    </div>
+</div>

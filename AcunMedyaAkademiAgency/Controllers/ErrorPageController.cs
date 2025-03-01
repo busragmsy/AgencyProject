@@ -6,6 +6,7 @@ using System.Web.Mvc;
 
 namespace AcunMedyaAkademiAgency.Controllers
 {
+    [AllowAnonymous]
     public class ErrorPageController : Controller
     {
         // GET: ErrorPage

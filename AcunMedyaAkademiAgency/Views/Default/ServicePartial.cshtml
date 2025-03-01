@@ -1,0 +1,22 @@
+﻿@model List<AcunMedyaAkademiAgency.Entities.Service>
+
+<section class="page-section" id="services">
+    <div class="container">
+        <div class="text-center">
+            <h2 class="section-heading text-uppercase">Hizmetler</h2>
+            <h3 class="section-subheading text-muted">Her aşamada yanınızdayız! İşte her türlü ihtiyaçlarınıza yönelik Hizmetlerimiz</h3>
+        </div>
+        <div class="row text-center">
+            @foreach (var item in Model)
+            {
+                <div class="col-md-4">
+                    <span class="fa-stack fa-4x">
+                        <img src="@item.ImageUrl" class="circle-image" width="85px" height="85px" />
+                    </span>
+                    <h4 class="my-3">@item.Title</h4>
+                    <p class="text-muted">@item.Description</p>
+                </div>
+            }
+        </div>
+    </div>
+</section>

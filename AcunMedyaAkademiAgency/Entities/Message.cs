@@ -12,7 +12,7 @@ namespace AcunMedyaAkademiAgency.Entities
         public string Email { get; set; }
         public string Title { get; set; }
         public string Description { get; set; }
-        public string SendDate { get; set; }
-        public bool IsRead { get; set; }
+        public DateTime SendDate { get; set; } = DateTime.Now;
+        public bool? IsRead { get; set; } = false;
     }
 }

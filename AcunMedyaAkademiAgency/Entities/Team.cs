@@ -11,6 +11,10 @@ namespace AcunMedyaAkademiAgency.Entities
 		public string NameSurname { get; set; }
 
 		public string ImageUrl { get; set; }
+        public string Gender { get; set; }
+        public string City { get; set; }
+        public int BranchId { get; set; }
+        public virtual Branch Branch { get; set; }
 
     }
 }

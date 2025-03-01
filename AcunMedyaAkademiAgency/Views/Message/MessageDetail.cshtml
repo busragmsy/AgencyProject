@@ -1,0 +1,42 @@
+﻿
+@{
+    ViewBag.Title = "MessageDetail";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<div class="col-lg-12 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Mesaj Detayları Sayfası</h4>
+
+            <table class="table table-bordered">
+                <tr>
+                    <th>ID</th>
+                    <td>@Model.MessageId</td>
+                </tr>
+                <tr>
+                    <th>Ad Soyad</th>
+                    <td>@Model.NameSurname</td>
+                </tr>
+                <tr>
+                    <th>Mail</th>
+                    <td>@Model.Email</td>
+                </tr>
+                <tr>
+                    <th>Telefon</th>
+                    <td>@Model.Title</td>
+                </tr>
+                <tr>
+                    <th>Mesaj</th>
+                    <td>@Model.Description</td>
+                </tr>
+                <tr>
+                    <th>Gönderim Tarihi</th>
+                    <td>@Model.SendDate</td>
+                </tr>
+            </table>
+
+            <a href="/Message/MessageList" class="btn btn-primary">Geri Dön</a>
+        </div>
+    </div>
+</div>

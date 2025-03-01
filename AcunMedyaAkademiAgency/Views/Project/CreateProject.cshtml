@@ -1,0 +1,34 @@
+﻿﻿@model AcunMedyaAkademiAgency.Entities.Project
+@{
+    ViewBag.Title = "CreateProject";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<div class="col-12 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Proje Ekleme Sayfası</h4>
+            <p class="card-description">Proje için ekleme işlemlerini buradan yapabilirsiniz.</p>
+            <form class="forms-sample" method="post">
+
+                <div class="form-group">
+                    <label for="exampleInputName1">Proje Adı</label>
+                    <input type="text" class="form-control" id="exampleInputName1" placeholder="Proje Adı" name="Title" />
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleInputCity1">Proje Resim Yolu</label>
+                    <input type="text" class="form-control" id="exampleInputName1" placeholder="Proje Resim Yolu" name="ImageUrl" />
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleInputCity1">Proje Kategorisi</label>
+                    @Html.DropDownListFor(x => x.CategoryId, (List<SelectListItem>)ViewBag.v, new { @class = "table table-bordered" })
+                </div>
+
+                <button type="submit" class="btn btn-primary mr-2"> Kaydet </button>
+                <button class="btn btn-light">Vazgeç</button>
+            </form>
+        </div>
+    </div>
+</div>

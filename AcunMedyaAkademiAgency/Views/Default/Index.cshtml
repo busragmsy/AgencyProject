@@ -1,0 +1,46 @@
+﻿﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+@Html.Partial("/Views/Default/HeadPartial.cshtml")
+<body id="page-top">
+    <!-- Navigation-->
+    @Html.Partial("/Views/Default/NavbarPartial.cshtml")
+    <!-- Masthead-->
+    @Html.Action("MastheadPartial", "Default")
+    <!-- Services-->
+    @Html.Action("ServicePartial", "Default")
+    <!-- Portfolio Grid-->
+    @Html.Action("ProjectPartial", "Default")
+    <!-- About-->
+    @Html.Action("AboutPartial", "Default")
+    <!-- Team-->
+    @Html.Action("TeamPartial", "Default")
+    <!-- Clients-->
+    @Html.Partial("/Views/Default/ClientPartial.cshtml")
+    <!-- Contact-->
+    @Html.Action("MessagePartial", "Default")
+
+    @Html.Partial("/Views/Default/GoogleMapsPartial.cshtml")
+    <!-- Footer-->
+    @Html.Partial("/Views/Default/FooterPartial.cshtml")
+    <!-- Portfolio Modals-->
+    <!-- Portfolio item 1 modal popup-->
+    <!-- Portfolio item 2 modal popup-->
+    @Html.Action("ModalPartial", "Default")
+    <!-- Maps -->
+    <!-- Portfolio item 3 modal popup-->
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="/Templates/agency/js/scripts.js"></script>
+    <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+    <!-- * *                               SB Forms JS                               * *-->
+    <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
+    <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+    <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+</body>
+</html>

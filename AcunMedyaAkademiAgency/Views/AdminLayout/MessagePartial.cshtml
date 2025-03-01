@@ -1,0 +1,23 @@
+﻿@model List<AcunMedyaAkademiAgency.Entities.Message>
+
+<li class="nav-item dropdown d-none d-sm-flex">
+    <a class="nav-link count-indicator dropdown-toggle" id="messageDropdown" href="#" data-toggle="dropdown">
+        <i class="mdi mdi-email-outline"></i>
+        <span class="count count-varient2">@ViewBag.messageCount</span>
+    </a>
+    <div class="dropdown-menu navbar-dropdown navbar-dropdown-large preview-list" aria-labelledby="messageDropdown">
+        <h6 class="p-3 mb-0">Mesajlar</h6>
+        @foreach (var item in Model)
+        {
+            <a class="dropdown-item preview-item">
+                <div class="preview-item-content flex-grow">
+                    <span class="badge badge-pill badge-success">@item.Title</span>
+                    <p class="text-small text-muted ellipsis mb-0"> @item.NameSurname </p>
+                </div>
+                <p class="text-small text-muted align-self-start">@item.SendDate</p>
+            </a>
+        }
+
+        <h6 class="p-3 mb-0"><a href="@Url.Action("MessageList", "Message")">Detayları Görüntüle</a></h6>
+    </div>
+</li>

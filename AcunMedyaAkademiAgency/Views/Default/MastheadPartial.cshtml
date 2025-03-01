@@ -1,0 +1,15 @@
+﻿@model List<AcunMedyaAkademiAgency.Entities.Feature>
+
+<header class="masthead">
+    <div class="container">
+        @foreach (var item in Model)
+        {
+            <div class="masthead-subheading">@item.Title</div>
+            <div class="masthead-heading text-uppercase">@item.Description</div>
+        }
+
+        <a class="btn btn-primary btn-xl" href="#services">Keşfetmeye Başla
+        
+        </a>
+    </div>
+</header>

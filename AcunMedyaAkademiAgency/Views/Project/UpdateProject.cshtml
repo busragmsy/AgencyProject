@@ -1,0 +1,35 @@
+﻿@model AcunMedyaAkademiAgency.Entities.Project
+@{
+    ViewBag.Title = "UpdateProject";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<div class="col-12 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Proje Güncelleme Sayfası</h4>
+            <p class="card-description">Proje güncelleme işlemlerini buradan yapabilirsiniz.</p>
+            <form class="forms-sample" method="post">
+                <div class="form-group">
+                    <label>Proje Id</label>
+                    @Html.TextBoxFor(x => x.ProjectId, new { @class = "form-control" })
+                </div>
+                <div class="form-group">
+                    <label>Proje Adı</label>
+                    @Html.TextBoxFor(x => x.Title, new { @class = "form-control" })
+                </div>
+
+                <div class="form-group">
+                    <label>Proje Resim Yolu</label>
+                    @Html.TextBoxFor(x => x.ImageUrl, new { @class = "form-control" })
+                </div>
+                <div class="form-group">
+                    <label>Proje Kategorisi</label>
+                    @Html.DropDownListFor(x => x.CategoryId, (List<SelectListItem>)ViewBag.cat, new { @class = "table table-bordered" })
+                </div>
+                <button type="submit" class="btn btn-primary mr-2">Güncelle</button>
+                <button type="reset" class="btn btn-light">Vazgeç</button>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,46 @@
+﻿@model AcunMedyaAkademiAgency.Entities.About
+@{
+    ViewBag.Title = "UpdateAbout";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<div class="col-12 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Hakkımızda Güncelleme Sayfası</h4>
+            <p class="card-description">Hakkımızda ile ilgili güncelleme işlemlerini buradan yapabilirsiniz.</p>
+            <form class="forms-sample" method="post">
+
+                <div class="form-group">
+                    <label for="AboutId">Id</label>
+                    @Html.TextBoxFor(x => x.AboutId, new { @class = "form-control", @readonly = "readonly" })
+                </div>
+
+                <div class="form-group">
+                    <label for="Title">Başlık</label>
+                    @Html.TextBoxFor(x => x.Title, new { @class = "form-control" })
+                </div>
+
+                <div class="form-group">
+                    <label for="ImageUrl">Resim Yolu</label>
+                    @Html.TextBoxFor(x => x.ImageUrl, new { @class = "form-control" })
+                </div>
+
+                <div class="form-group">
+                    <label for="Description">Açıklaması</label>
+                    <textarea class="form-control"
+                              id="Description"
+                              rows="4" name="Description">@Model.Description</textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="Date">Tarih</label>
+                    @Html.TextBoxFor(x => x.Date, new { @class = "form-control" })
+                </div>
+
+                <button type="submit" class="btn btn-primary mr-2"> Güncelle </button>
+                <button type="reset" class="btn btn-light">Vazgeç</button>
+            </form>
+        </div>
+    </div>
+</div>

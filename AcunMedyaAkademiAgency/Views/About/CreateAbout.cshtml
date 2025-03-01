@@ -1,0 +1,65 @@
+﻿
+@{
+    ViewBag.Title = "CreateAbout";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+
+<div class="col-12 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Hakkında Ekleme Sayfası</h4>
+            <p class="card-description">Hakkında ekleme işlemlerini buradan yapabilirsiniz.</p>
+            <form class="forms-sample" method="post">
+
+                <!-- Başlık -->
+                <div class="form-group">
+                    <label for="Title">Hakkımızda Başlığı</label>
+                    <input type="text"
+                           class="form-control"
+                           id="Title"
+                           placeholder="Başlık giriniz"
+                           name="Title"
+                           required />
+                </div>
+
+                <!-- Açıklama -->
+                <div class="form-group">
+                    <label for="Description">Hakkımızda Açıklaması</label>
+                    <textarea rows="4"
+                              class="form-control"
+                              id="Description"
+                              name="Description"
+                              placeholder="Açıklama giriniz"
+                              required></textarea>
+                </div>
+
+                <!-- Resim Yolu -->
+                <div class="form-group">
+                    <label for="ImageUrl">Resim Yolu</label>
+                    <input type="text"
+                           class="form-control"
+                           id="ImageUrl"
+                           placeholder="Resim URL'si giriniz"
+                           name="ImageUrl"
+                           required />
+                </div>
+
+                <!-- Tarih -->
+                <div class="form-group">
+                    <label for="Date">Tarih</label>
+                    <input type="text"
+                           class="form-control"
+                           id="Date"
+                           placeholder="Örn: 2023-2024"
+                           name="Date"
+                           required />
+                </div>
+
+                <button type="submit" class="btn btn-primary mr-2">Kaydet</button>
+                <button type="reset" class="btn btn-light">Vazgeç</button>
+            </form>
+        </div>
+    </div>
+</div>
+

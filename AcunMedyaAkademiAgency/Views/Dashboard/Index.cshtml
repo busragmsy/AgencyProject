@@ -1,0 +1,186 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<div class="row">
+    <div class="col-sm-12 mt-3">
+        <h3>İstatistikler</h3>
+    </div>
+    <div class="col-xl-12 col-lg-12 stretch-card grid-margin">
+        <div class="col-3 stretch-card grid-margin grid-margin-sm-0 pb-sm-3">
+            <div class="card bg-warning">
+                <div class="card-body px-3 py-4">
+                    <div class="d-flex justify-content-between align-items-start">
+                        <div class="color-card">
+                            <p class="mb-0 color-card-head">Bildirim Sayısı</p>
+                            <h2 class="text-white">
+                                @ViewBag.bildirimsayisi
+                            </h2>
+                        </div>
+                        <i class="card-icon-indicator mdi mdi-bell-plus bg-inverse-icon-warning"></i>
+                    </div>
+                    <h6 class="text-white">Tüm bildirimler</h6>
+                </div>
+            </div>
+        </div>
+        <div class="col-3 stretch-card grid-margin grid-margin-sm-0 pb-sm-3">
+            <div class="card bg-danger">
+                <div class="card-body px-3 py-4">
+                    <div class="d-flex justify-content-between align-items-start">
+                        <div class="color-card">
+                            <p class="mb-0 color-card-head">Projeler Sayısı</p>
+                            <h2 class="text-white">
+                                @ViewBag.projectsayisi
+                            </h2>
+                        </div>
+                        <i class="card-icon-indicator mdi mdi-poll-box bg-inverse-icon-danger"></i>
+                    </div>
+                    <h6 class="text-white">Tüm Projeler</h6>
+                </div>
+            </div>
+        </div>
+        <div class="col-3 stretch-card grid-margin grid-margin-sm-0 pb-sm-3">
+            <div class="card bg-primary">
+                <div class="card-body px-3 py-4">
+                    <div class="d-flex justify-content-between align-items-start">
+                        <div class="color-card">
+                            <p class="mb-0 color-card-head"> Grafik Tasarım Projeleri</p>
+                            <h2 class="text-white">
+                                @ViewBag.grafikCount
+                            </h2>
+                        </div>
+                        <i class="card-icon-indicator mdi mdi-chart-line bg-inverse-icon-primary"></i>
+                    </div>
+                    <h6 class="text-white">Tüm Grafikler</h6>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-3 stretch-card grid-margin grid-margin-sm-0 pb-sm-3">
+            <div class="card bg-success">
+                <div class="card-body px-3 py-4">
+                    <div class="d-flex justify-content-between align-items-start">
+                        <div class="color-card">
+                            <p class="mb-0 color-card-head">Personeller</p>
+                            <h2 class="text-white">
+                                @ViewBag.personelsayisi
+                            </h2>
+                        </div>
+                        <i class="card-icon-indicator mdi mdi-account-circle bg-inverse-icon-success"></i>
+                    </div>
+                    <h6 class="text-white">Tüm Personeller</h6>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<div class="row">
+    <div class="col-sm-12 mt-3">
+
+    </div>
+    <div class="col-xl-12 col-lg-12 stretch-card grid-margin">
+        <div class="col-3 stretch-card grid-margin grid-margin-sm-0 pb-sm-3">
+            <div class="card bg-warning">
+                <div class="card-body px-3 py-4">
+                    <div class="d-flex justify-content-between align-items-start">
+                        <div class="color-card">
+                            <p class="mb-0 color-card-head">Mesaj Sayısı</p>
+                            <h2 class="text-white">
+                                @ViewBag.mesajsayisi
+                            </h2>
+                        </div>
+                        <i class="card-icon-indicator mdi mdi-basket bg-inverse-icon-warning"></i>
+                    </div>
+                    <h6 class="text-white">Tüm Mesajlar</h6>
+                </div>
+            </div>
+        </div>
+        <div class="col-3 stretch-card grid-margin grid-margin-sm-0 pb-sm-3">
+            <div class="card bg-danger">
+                <div class="card-body px-3 py-4">
+                    <div class="d-flex justify-content-between align-items-start">
+                        <div class="color-card">
+                            <p class="mb-0 color-card-head">Hizmetler Sayısı</p>
+                            <h2 class="text-white">
+                                @ViewBag.servicesayisi
+                            </h2>
+                        </div>
+                        <i class="card-icon-indicator mdi mdi-cube-outline bg-inverse-icon-danger"></i>
+                    </div>
+                    <h6 class="text-white">Tüm Hizmetler</h6>
+                </div>
+            </div>
+        </div>
+        <div class="col-3 stretch-card grid-margin grid-margin-sm-0 pb-sm-3">
+            <div class="card bg-primary">
+                <div class="card-body px-3 py-4">
+                    <div class="d-flex justify-content-between align-items-start">
+                        <div class="color-card">
+                            <p class="mb-0 color-card-head"> Software Developer Sayısı</p>
+                            <h2 class="text-white">
+                                @ViewBag.bransCount
+                            </h2>
+                        </div>
+                        <i class="card-icon-indicator mdi mdi-briefcase-outline bg-inverse-icon-primary"></i>
+                    </div>
+                    <h6 class="text-white">Software Developer</h6>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-3 stretch-card grid-margin grid-margin-sm-0 pb-sm-3">
+            <div class="card bg-success">
+                <div class="card-body px-3 py-4">
+                    <div class="d-flex justify-content-between align-items-start">
+                        <div class="color-card">
+                            <p class="mb-0 color-card-head">Adminler</p>
+                            <h2 class="text-white">
+                                @ViewBag.adminsayisi
+                            </h2>
+                        </div>
+                        <i class="card-icon-indicator mdi mdi-account-circle bg-inverse-icon-success"></i>
+                    </div>
+                    <h6 class="text-white">Tüm Adminler</h6>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="row">
+@Html.Action("StaffPartial", "Dashboard")
+@Html.Partial("BrowserPartial", "Dashboard")
+</div>
+
+<div class="row">
+    @Html.Partial("WeatherPartial")
+    <div class="col-xl-4 col-md-6 grid-margin stretch-card">
+        <!-- Datepicker -->
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title text-black"></h4>
+                <div id="inline-datepicker" class="datepicker table-responsive"></div>
+            </div>
+        </div>
+        <!-- Datepicker Ends -->
+    </div>
+</div>
+
+
+
+<!-- Datepicker JS -->
+<script src="assets/vendors/bootstrap-datepicker/bootstrap-datepicker.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $("#inline-datepicker").datepicker({
+            format: "dd/mm/yyyy",
+            todayHighlight: true,
+            autoclose: true
+        });
+    });
+</script>
+
+

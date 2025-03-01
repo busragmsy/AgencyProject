@@ -128,11 +128,19 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Context\AgencyContext.cs" />
+    <Compile Include="Controllers\AboutController.cs" />
     <Compile Include="Controllers\AdminLayoutController.cs" />
+    <Compile Include="Controllers\CategoryController.cs" />
+    <Compile Include="Controllers\DashboardController.cs" />
+    <Compile Include="Controllers\DefaultController.cs" />
     <Compile Include="Controllers\ErrorPageController.cs" />
+    <Compile Include="Controllers\FeatureController.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\MessageController.cs" />
     <Compile Include="Controllers\ProjectController.cs" />
     <Compile Include="Controllers\ServiceController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\TeamController.cs" />
     <Compile Include="Entities\About.cs" />
     <Compile Include="Entities\Admin.cs" />
     <Compile Include="Entities\Branch.cs" />
@@ -143,6 +151,7 @@
     <Compile Include="Entities\Project.cs" />
     <Compile Include="Entities\ProjectDetail.cs" />
     <Compile Include="Entities\Service.cs" />
+    <Compile Include="Entities\SocialMedia.cs" />
     <Compile Include="Entities\Team.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -170,6 +179,46 @@
     <Compile Include="Migrations\202502201459036_mig2.cs" />
     <Compile Include="Migrations\202502201459036_mig2.Designer.cs">
       <DependentUpon>202502201459036_mig2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202502201615445_mig3.cs" />
+    <Compile Include="Migrations\202502201615445_mig3.Designer.cs">
+      <DependentUpon>202502201615445_mig3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202502210943283_mig4.cs" />
+    <Compile Include="Migrations\202502210943283_mig4.Designer.cs">
+      <DependentUpon>202502210943283_mig4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202502210953592_mig5.cs" />
+    <Compile Include="Migrations\202502210953592_mig5.Designer.cs">
+      <DependentUpon>202502210953592_mig5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202502281140516_mig_iliski.cs" />
+    <Compile Include="Migrations\202502281140516_mig_iliski.Designer.cs">
+      <DependentUpon>202502281140516_mig_iliski.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202502281246123_mig_ekleme.cs" />
+    <Compile Include="Migrations\202502281246123_mig_ekleme.Designer.cs">
+      <DependentUpon>202502281246123_mig_ekleme.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202502281503331_mig_aboutdate.cs" />
+    <Compile Include="Migrations\202502281503331_mig_aboutdate.Designer.cs">
+      <DependentUpon>202502281503331_mig_aboutdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202502281816002_mig_message.cs" />
+    <Compile Include="Migrations\202502281816002_mig_message.Designer.cs">
+      <DependentUpon>202502281816002_mig_message.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202503011425527_mig_image.cs" />
+    <Compile Include="Migrations\202503011425527_mig_image.Designer.cs">
+      <DependentUpon>202503011425527_mig_image.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202503011811255_mig_7.cs" />
+    <Compile Include="Migrations\202503011811255_mig_7.Designer.cs">
+      <DependentUpon>202503011811255_mig_7.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202503011819243_mig_message1.cs" />
+    <Compile Include="Migrations\202503011819243_mig_message1.Designer.cs">
+      <DependentUpon>202503011819243_mig_message1.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -949,6 +998,21 @@
     <Content Include="Templates\Breeze-Free-Bootstrap-Admin-Template-1.0.0\template\partials\_navbar.html" />
     <Content Include="Templates\Breeze-Free-Bootstrap-Admin-Template-1.0.0\template\partials\_settings-panel.html" />
     <Content Include="Templates\Breeze-Free-Bootstrap-Admin-Template-1.0.0\template\partials\_sidebar.html" />
+    <Content Include="Templates\login-form-15\css\bootstrap.min.css" />
+    <Content Include="Templates\login-form-15\css\bootstrap\mixins\_border-radius.css" />
+    <Content Include="Templates\login-form-15\css\bootstrap\mixins\_screen-reader.css" />
+    <Content Include="Templates\login-form-15\css\bootstrap\mixins\_transition.css" />
+    <Content Include="Templates\login-form-15\css\bootstrap\mixins\_visibility.css" />
+    <Content Include="Templates\login-form-15\css\bootstrap\utilities\_stretched-link.css" />
+    <Content Include="Templates\login-form-15\css\bootstrap\_media.css" />
+    <Content Include="Templates\login-form-15\css\style.css" />
+    <Content Include="Templates\login-form-15\images\bg-1.jpg" />
+    <Content Include="Templates\login-form-15\index.html" />
+    <Content Include="Templates\login-form-15\js\bootstrap.min.js" />
+    <Content Include="Templates\login-form-15\js\jquery.min.js" />
+    <Content Include="Templates\login-form-15\js\main.js" />
+    <Content Include="Templates\login-form-15\js\popper.js" />
+    <Content Include="Templates\login-form-15\main.html" />
     <Content Include="Templates\simple-404-template-master\404.html" />
     <Content Include="Templates\simple-404-template-master\assets\css\style.css" />
     <Content Include="Templates\simple-404-template-master\assets\images\404.svg" />
@@ -1143,6 +1207,143 @@
     <Content Include="Views\ErrorPage\Page404.cshtml" />
     <Content Include="Templates\simple-404-template-master\LICENSE" />
     <Content Include="Templates\simple-404-template-master\README.md" />
+    <Content Include="Views\Project\ProjectList.cshtml" />
+    <Content Include="Views\Project\CreateProject.cshtml" />
+    <Content Include="Templates\login-form-15\.DS_Store" />
+    <Content Include="Templates\login-form-15\css\.DS_Store" />
+    <Content Include="Templates\login-form-15\css\bootstrap\.DS_Store" />
+    <Content Include="Templates\login-form-15\css\bootstrap\mixins\.DS_Store" />
+    <Content Include="Templates\login-form-15\fonts\.DS_Store" />
+    <Content Include="Templates\login-form-15\images\.DS_Store" />
+    <Content Include="Templates\login-form-15\js\.DS_Store" />
+    <Content Include="Templates\login-form-15\scss\.DS_Store" />
+    <Content Include="Templates\login-form-15\scss\bootstrap\.DS_Store" />
+    <Content Include="Templates\login-form-15\scss\bootstrap\bootstrap-grid.scss" />
+    <Content Include="Templates\login-form-15\scss\bootstrap\bootstrap-reboot.scss" />
+    <Content Include="Templates\login-form-15\scss\bootstrap\bootstrap.scss" />
+    <Content Include="Templates\login-form-15\scss\bootstrap\mixins\_alert.scss" />
+    <Content Include="Templates\login-form-15\scss\bootstrap\mixins\_background-variant.scss" />
+    <Content Include="Templates\login-form-15\scss\bootstrap\mixins\_badge.scss" />
+    <Content Include="Templates\login-form-15\scss\bootstrap\mixins\_border-radius.scss" />
+    <Content Include="Templates\login-form-15\scss\bootstrap\mixins\_box-shadow.scss" />
+    <Content Include="Templates\login-form-15\scss\bootstrap\mixins\_breakpoints.scss" />
+    <Content Include="Templates\login-form-15\scss\bootstrap\mixins\_buttons.scss" />
+    <Content Include="Templates\login-form-15\scss\bootstrap\mixins\_caret.scss" />
+    <Content Include="Templates\login-form-15\scss\bootstrap\mixins\_clearfix.scss" />
+    <Content Include="Templates\login-form-15\scss\bootstrap\mixins\_deprecate.scss" />
+    <Content Include="Templates\login-form-15\scss\bootstrap\mixins\_float.scss" />
+    <Content Include="Templates\login-form-15\scss\bootstrap\mixins\_forms.scss" />
+    <Content Include="Templates\login-form-15\scss\bootstrap\mixins\_gradients.scss" />
+    <Content Include="Templates\login-form-15\scss\bootstrap\mixins\_grid-framework.scss" />
+    <Content Include="Templates\login-form-15\scss\bootstrap\mixins\_grid.scss" />
+    <Content Include="Templates\login-form-15\scss\bootstrap\mixins\_hover.scss" />
+    <Content Include="Templates\login-form-15\scss\bootstrap\mixins\_image.scss" />
+    <Content Include="Templates\login-form-15\scss\bootstrap\mixins\_list-group.scss" />
+    <Content Include="Templates\login-form-15\scss\bootstrap\mixins\_lists.scss" />
+    <Content Include="Templates\login-form-15\scss\bootstrap\mixins\_nav-divider.scss" />
+    <Content Include="Templates\login-form-15\scss\bootstrap\mixins\_pagination.scss" />
+    <Content Include="Templates\login-form-15\scss\bootstrap\mixins\_reset-text.scss" />
+    <Content Include="Templates\login-form-15\scss\bootstrap\mixins\_resize.scss" />
+    <Content Include="Templates\login-form-15\scss\bootstrap\mixins\_screen-reader.scss" />
+    <Content Include="Templates\login-form-15\scss\bootstrap\mixins\_size.scss" />
+    <Content Include="Templates\login-form-15\scss\bootstrap\mixins\_table-row.scss" />
+    <Content Include="Templates\login-form-15\scss\bootstrap\mixins\_text-emphasis.scss" />
+    <Content Include="Templates\login-form-15\scss\bootstrap\mixins\_text-hide.scss" />
+    <Content Include="Templates\login-form-15\scss\bootstrap\mixins\_text-truncate.scss" />
+    <Content Include="Templates\login-form-15\scss\bootstrap\mixins\_transition.scss" />
+    <Content Include="Templates\login-form-15\scss\bootstrap\mixins\_visibility.scss" />
+    <Content Include="Templates\login-form-15\scss\bootstrap\utilities\_align.scss" />
+    <Content Include="Templates\login-form-15\scss\bootstrap\utilities\_background.scss" />
+    <Content Include="Templates\login-form-15\scss\bootstrap\utilities\_borders.scss" />
+    <Content Include="Templates\login-form-15\scss\bootstrap\utilities\_clearfix.scss" />
+    <Content Include="Templates\login-form-15\scss\bootstrap\utilities\_display.scss" />
+    <Content Include="Templates\login-form-15\scss\bootstrap\utilities\_embed.scss" />
+    <Content Include="Templates\login-form-15\scss\bootstrap\utilities\_flex.scss" />
+    <Content Include="Templates\login-form-15\scss\bootstrap\utilities\_float.scss" />
+    <Content Include="Templates\login-form-15\scss\bootstrap\utilities\_overflow.scss" />
+    <Content Include="Templates\login-form-15\scss\bootstrap\utilities\_position.scss" />
+    <Content Include="Templates\login-form-15\scss\bootstrap\utilities\_screenreaders.scss" />
+    <Content Include="Templates\login-form-15\scss\bootstrap\utilities\_shadows.scss" />
+    <Content Include="Templates\login-form-15\scss\bootstrap\utilities\_sizing.scss" />
+    <Content Include="Templates\login-form-15\scss\bootstrap\utilities\_spacing.scss" />
+    <Content Include="Templates\login-form-15\scss\bootstrap\utilities\_stretched-link.scss" />
+    <Content Include="Templates\login-form-15\scss\bootstrap\utilities\_text.scss" />
+    <Content Include="Templates\login-form-15\scss\bootstrap\utilities\_visibility.scss" />
+    <Content Include="Templates\login-form-15\scss\bootstrap\vendor\_rfs.scss" />
+    <Content Include="Templates\login-form-15\scss\bootstrap\_alert.scss" />
+    <Content Include="Templates\login-form-15\scss\bootstrap\_badge.scss" />
+    <Content Include="Templates\login-form-15\scss\bootstrap\_breadcrumb.scss" />
+    <Content Include="Templates\login-form-15\scss\bootstrap\_button-group.scss" />
+    <Content Include="Templates\login-form-15\scss\bootstrap\_buttons.scss" />
+    <Content Include="Templates\login-form-15\scss\bootstrap\_card.scss" />
+    <Content Include="Templates\login-form-15\scss\bootstrap\_carousel.scss" />
+    <Content Include="Templates\login-form-15\scss\bootstrap\_close.scss" />
+    <Content Include="Templates\login-form-15\scss\bootstrap\_code.scss" />
+    <Content Include="Templates\login-form-15\scss\bootstrap\_custom-forms.scss" />
+    <Content Include="Templates\login-form-15\scss\bootstrap\_dropdown.scss" />
+    <Content Include="Templates\login-form-15\scss\bootstrap\_forms.scss" />
+    <Content Include="Templates\login-form-15\scss\bootstrap\_functions.scss" />
+    <Content Include="Templates\login-form-15\scss\bootstrap\_grid.scss" />
+    <Content Include="Templates\login-form-15\scss\bootstrap\_images.scss" />
+    <Content Include="Templates\login-form-15\scss\bootstrap\_input-group.scss" />
+    <Content Include="Templates\login-form-15\scss\bootstrap\_jumbotron.scss" />
+    <Content Include="Templates\login-form-15\scss\bootstrap\_list-group.scss" />
+    <Content Include="Templates\login-form-15\scss\bootstrap\_media.scss" />
+    <Content Include="Templates\login-form-15\scss\bootstrap\_mixins.scss" />
+    <Content Include="Templates\login-form-15\scss\bootstrap\_modal.scss" />
+    <Content Include="Templates\login-form-15\scss\bootstrap\_nav.scss" />
+    <Content Include="Templates\login-form-15\scss\bootstrap\_navbar.scss" />
+    <Content Include="Templates\login-form-15\scss\bootstrap\_pagination.scss" />
+    <Content Include="Templates\login-form-15\scss\bootstrap\_popover.scss" />
+    <Content Include="Templates\login-form-15\scss\bootstrap\_print.scss" />
+    <Content Include="Templates\login-form-15\scss\bootstrap\_progress.scss" />
+    <Content Include="Templates\login-form-15\scss\bootstrap\_reboot.scss" />
+    <Content Include="Templates\login-form-15\scss\bootstrap\_root.scss" />
+    <Content Include="Templates\login-form-15\scss\bootstrap\_spinners.scss" />
+    <Content Include="Templates\login-form-15\scss\bootstrap\_tables.scss" />
+    <Content Include="Templates\login-form-15\scss\bootstrap\_toasts.scss" />
+    <Content Include="Templates\login-form-15\scss\bootstrap\_tooltip.scss" />
+    <Content Include="Templates\login-form-15\scss\bootstrap\_transitions.scss" />
+    <Content Include="Templates\login-form-15\scss\bootstrap\_type.scss" />
+    <Content Include="Templates\login-form-15\scss\bootstrap\_utilities.scss" />
+    <Content Include="Templates\login-form-15\scss\bootstrap\_variables.scss" />
+    <Content Include="Templates\login-form-15\scss\style.scss" />
+    <Content Include="Views\Login\AdminLogin.cshtml" />
+    <Content Include="Views\Dashboard\Index.cshtml" />
+    <Content Include="Views\Default\Index.cshtml" />
+    <Content Include="Views\Default\ProjectPartial.cshtml" />
+    <Content Include="Views\Default\ModalPartial.cshtml" />
+    <Content Include="Views\Dashboard\StaffPartial.cshtml" />
+    <Content Include="Views\Default\TeamPartial.cshtml" />
+    <Content Include="Views\Default\SocialMediaPartial.cshtml" />
+    <Content Include="Views\Default\HeadPartial.cshtml" />
+    <Content Include="Views\Default\NavbarPartial.cshtml" />
+    <Content Include="Views\Default\MastheadPartial.cshtml" />
+    <Content Include="Views\Default\ServicePartial.cshtml" />
+    <Content Include="Views\Default\AboutPartial.cshtml" />
+    <Content Include="Views\Default\ClientPartial.cshtml" />
+    <Content Include="Views\Default\MessagePartial.cshtml" />
+    <Content Include="Views\Default\FooterPartial.cshtml" />
+    <Content Include="Views\Default\GoogleMapsPartial.cshtml" />
+    <Content Include="Views\Project\UpdateProject.cshtml" />
+    <Content Include="Views\AdminLayout\JsPartial.cshtml" />
+    <Content Include="Views\About\AboutList.cshtml" />
+    <Content Include="Views\About\CreateAbout.cshtml" />
+    <Content Include="Views\About\UpdateAbout.cshtml" />
+    <Content Include="Views\Category\CategoryList.cshtml" />
+    <Content Include="Views\Category\CreateCategory.cshtml" />
+    <Content Include="Views\Category\UpdateCategory.cshtml" />
+    <Content Include="Views\Feature\CreateFeature.cshtml" />
+    <Content Include="Views\Feature\FeatureList.cshtml" />
+    <Content Include="Views\Feature\UpdateFeature.cshtml" />
+    <Content Include="Views\Team\TeamList.cshtml" />
+    <Content Include="Views\Team\CreateTeam.cshtml" />
+    <Content Include="Views\Team\UpdateTeam.cshtml" />
+    <Content Include="Views\AdminLayout\MessagePartial.cshtml" />
+    <Content Include="Views\Dashboard\WeatherPartial.cshtml" />
+    <Content Include="Views\Dashboard\BrowserPartial.cshtml" />
+    <Content Include="Views\Message\MessageList.cshtml" />
+    <Content Include="Views\Message\MessageDetail.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -1150,8 +1351,6 @@
     <Folder Include="Templates\agency\.git\objects\info\" />
     <Folder Include="Templates\agency\.git\objects\pack\" />
     <Folder Include="Templates\agency\.git\refs\tags\" />
-    <Folder Include="Views\Category\" />
-    <Folder Include="Views\Project\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -1184,6 +1383,36 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202502201459036_mig2.resx">
       <DependentUpon>202502201459036_mig2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202502201615445_mig3.resx">
+      <DependentUpon>202502201615445_mig3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202502210943283_mig4.resx">
+      <DependentUpon>202502210943283_mig4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202502210953592_mig5.resx">
+      <DependentUpon>202502210953592_mig5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202502281140516_mig_iliski.resx">
+      <DependentUpon>202502281140516_mig_iliski.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202502281246123_mig_ekleme.resx">
+      <DependentUpon>202502281246123_mig_ekleme.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202502281503331_mig_aboutdate.resx">
+      <DependentUpon>202502281503331_mig_aboutdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202502281816002_mig_message.resx">
+      <DependentUpon>202502281816002_mig_message.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202503011425527_mig_image.resx">
+      <DependentUpon>202503011425527_mig_image.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202503011811255_mig_7.resx">
+      <DependentUpon>202503011811255_mig_7.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202503011819243_mig_message1.resx">
+      <DependentUpon>202503011819243_mig_message1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
